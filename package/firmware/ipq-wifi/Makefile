@@ -5,10 +5,14 @@ PKG_NAME:=ipq-wifi
 PKG_RELEASE:=1
 
 PKG_SOURCE_PROTO:=git
-PKG_SOURCE_URL=$(PROJECT_GIT)/project/firmware/qca-wireless.git
-PKG_SOURCE_DATE:=2026-09-10
-PKG_SOURCE_VERSION:=04dff0ab979f153a4605095b5e449a9ac5494a17
-PKG_MIRROR_HASH:=b5ddee6924921861fbb20e2e46c965794e7e12908364141330ff01bc4bdbaa72
+#PKG_SOURCE_URL=$(PROJECT_GIT)/project/firmware/qca-wireless.git
+#PKG_SOURCE_DATE:=2026-09-10
+#PKG_SOURCE_VERSION:=04dff0ab979f153a4605095b5e449a9ac5494a17
+#PKG_MIRROR_HASH:=b5ddee6924921861fbb20e2e46c965794e7e12908364141330ff01bc4bdbaa72
+PKG_SOURCE_URL=https://github.com/ServError/firmware_qca-wireless.git
+PKG_SOURCE_DATE:=2026-09-15
+PKG_SOURCE_VERSION:=265bd39acb5aeea691784949f3d3e2fe3eda193d
+PKG_MIRROR_HASH:=a83fedf01c2ce9832184c330f2b5ca6c59251f061649f6b6c20b849b8c030067
 PKG_FLAGS:=nonshared
 
 include $(INCLUDE_DIR)/package.mk
@@ -124,6 +128,7 @@ ALLWIFIBOARDS:= \
 	zte_mf286c \
 	zte_mf287 \
 	zte_mf287plus \
+	zte_mf288 \
 	zyxel_nbg7815 \
 	zyxel_nwa110ax \
 	zyxel_nwa210ax \
@@ -327,6 +332,7 @@ $(eval $(call generate-ipq-wifi-package,zte_mf286ar,ZTE MF286A/R))
 $(eval $(call generate-ipq-wifi-package,zte_mf286c,ZTE MF286C))
 $(eval $(call generate-ipq-wifi-package,zte_mf287,ZTE MF287))
 $(eval $(call generate-ipq-wifi-package,zte_mf287plus,ZTE MF287Plus))
+$(eval $(call generate-ipq-wifi-package,zte_mf288,ZTE MF288))
 $(eval $(call generate-ipq-wifi-package,zyxel_nbg7815,Zyxel NBG7815))
 $(eval $(call generate-ipq-wifi-package,zyxel_nwa110ax,Zyxel NWA110AX))
 $(eval $(call generate-ipq-wifi-package,zyxel_nwa210ax,Zyxel NWA210AX))
