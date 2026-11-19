@@ -42,13 +42,6 @@
 			label = "blue:internal_led";
 			default-state = "keep";
 		};
-
-		led-1 {
-			function = LED_FUNCTION_WLAN;
-			color = <LED_COLOR_ID_BLUE>;
-			gpios = <&tlmm 61 GPIO_ACTIVE_LOW>;
-			linux,default-trigger = "phy0tpt";
-		};
 	};
 
 	keys {
